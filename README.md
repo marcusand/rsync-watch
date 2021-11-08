@@ -3,6 +3,11 @@
 Watch a local directory and sync to a remote host.
 Useful for developing on one machine while running the application on another one.
 
+## Requirements
+
+- `rsync` has to be installed on both machines
+- `fswatch` has to be installed on local machine
+
 ## Usage
 
 1. Clone repo
