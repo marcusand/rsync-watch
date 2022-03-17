@@ -1,6 +1,6 @@
 # rsync-watch
 
-Watch a local directory and sync to another location (for example a remote host on the network) via
+Watch a local path and sync to another location (for example a remote host on the network) via
 rsync.
 
 Useful for developing on one machine while running the application on another one.
