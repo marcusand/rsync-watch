@@ -24,15 +24,15 @@ rsync-watch SOURCE DESTINATION [OPTIONS]
 
 ### Options
 
-- `--ignore-file` file with paths to ignore. This option will get passed to rsync's `--exclude-from`.
+- `--exclude` comma-separated list of paths to ignore. This option will get passed to rsync and fswatch.
 
 ### Usage Example
 
 ```sh
 
-rsync-watch my-app-folder 192.168.1.1::desktop --ignore-file my-app-foler/.gitignore
+rsync-watch my-app-folder 192.168.1.1::desktop --exclude=my-app-folder/node_modules,my-app-folder/.env
 ```
 
 This will sync the local folder `my-app-folder` to a remote host in the local network
-with a virtual directory or module called `desktop` while ignoring all files
-that are listed in the applications `.gitignore`
+with a virtual directory or module called `desktop` while ignoring all files in the
+node_modules folder and the environment file.
