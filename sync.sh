@@ -11,5 +11,5 @@ if [[ $3 == --exclude=* ]]; then
 fi
 
 
-alias run_rsync='rsync -azP --no-o --no-g --delete $exclude "$1" "$2"'
+alias run_rsync='rsync -azP --inplace --no-o --no-g --delete $exclude "$1" "$2"'
 run_rsync; fswatch -o $exclude "$1" | while read f; do run_rsync; done
